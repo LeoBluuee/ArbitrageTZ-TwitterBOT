@@ -1,23 +1,3 @@
-# Copyright (c) 2015–2016 Molly White
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
 import os
 import tweepy
 from secrets import *
@@ -25,17 +5,41 @@ from time import gmtime, strftime
 
 
 # ====== Individual bot configuration ==========================
-bot_username = ''
+bot_username = 'Dexter Arbitrage BOT'
 logfile_name = bot_username + ".log"
 
 # ==============================================================
 
+# #
+# #
+# Aqui vem a parte complicada. 
+# Dar query em duas APIs (X e Y) e comparar os dois valores.
+# Gera 3 condições: Valores iguais, X>Y, e X<Y.
+# No primeiro caso, enviar texto1. No segundo, texto2...
+# #
+# #
+
+
+# Uma coisa que não entendi é esse comentário da desenvolvedora na função debaixo. "Replace this with your code!"
+# Que "code"?? A Condicional vai ali?
+# Então aqui em cima eu só pego os 2 valores e salvo em 2 variáveis?
+# Aqui na função de baixo vai a comparação dos 2 valores e a função condicional?
+# #
+
+# O que pensei: Definir 3 variaveis com os 3 textos. (onde? em C coloca no começo do código, mas e Python?)
+# if x > y text = texto1    if x < y text = texto2      else text = texto3
+# Mas aí como eu declaro uma variável "text" tipo string, sem valor, pra ser preenchida pela condicional? É necessário isso em Python?
 
 def create_tweet():
     """Create the text of the tweet you want to send."""
     # Replace this with your code!
+   
     text = ""
     return text
+
+
+# Essa aqui quase fez sentido pra mim. Claramente é a função de tweetar.
+# Mas e esse texto? Pra que um texto dentro se já vai a variável "text" como parâmetro na função??
 
 
 def tweet(text):
